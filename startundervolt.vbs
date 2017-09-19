@@ -1,0 +1,1 @@
+createobject("wscript.shell").run "C:/XTU_undervolt/undervolt.bat",0

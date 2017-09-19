@@ -1,0 +1,25 @@
+
+************** XtuCLI Command Line Usage *****************
+
+XtuCLI.exe -i/-t/-m/-h <options>
+
+-h / -help : Help information will be available on console and C:\XTU_xmlFiles\Help.txt
+-i/ -info: information
+	 <options> can be system, tuning, monitoring, all
+	 Example: XtuCLI.exe -i all 
+	 Gives you the information about system, available controls, monitors in the system on console and will be available on system.txt,tuning.txt,monitoring.txt respectively. You can use controls and monitor id's for further usage of XtuCLI.exe
+
+-t/ -tune: tune the controls available in the system
+	 Example 1: XtuCLI.exe -t -id 29 -v 33 
+	 This will tune the control "1 Avtive Core" control to the value 33. Get the available controls Id details using -i options
+	 Example 2: XtuCLI.exe -t -id 29 -> This will get the control name and active value of control id 29
+
+-m/ -monitor: Gets the Monitor information on console and text file. use -i to get available monitor id's in the system.
+	 Example: XtuCLI.exe -m -id 6 
+	 this will get the monitor name "Processor Graphics Frequency" and the current value.
+
+XtuCLI.exe -i/-t/-m xml <options>
+
+	 Example 1: XtuCLI.exe -i system xml  Creates an xml file with name System.xml which contains all the systeminfo details in XTU_xmlFiles in C folder.
+	 Example 1: XtuCLI.exe -i tuning xml  Creates an xml file with name Tuning.xml which contains all the tuning information details of controls in XTU_xmlFiles in C folder.
+	 Example 1: XtuCLI.exe -i monitoring xml  Creates an xml file with name Monitor.xml which contains all the monitor details in XTU_xmlFiles in C folder.

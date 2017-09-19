@@ -1,0 +1,5 @@
+
+ID           Name                           Value[Unit] Min        Max        Multipliers Item Count
+
+34           Core Voltage Offset            -70mV      -1000      999        1          2048      
+
