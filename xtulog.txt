@@ -1,0 +1,6 @@
+2017/09/20 周三 12:58:16.13 current voltage offset: -80mV 
+2017/09/20 周三 12:58:25.65 current voltage offset: -80mV 
+2017/09/20 周三 12:59:14.81 current voltage offset: -80mV 
+2017/09/20 周三 13:00:42.14 current voltage offset: -80mV 
+2017/09/20 周三 13:01:50.62 current voltage offset: -80mV 
+2017/09/20 周三 13:03:54.85 current voltage offset: -80mV 

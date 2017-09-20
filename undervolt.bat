@@ -1,4 +1,11 @@
 @echo off
+for /f "skip=3 tokens=4" %%i in ('sc query XTU3SERVICE') do set "zt=%%i" &goto :next
+:next
+if /i "%zt%"=="RUNNING" (goto 1)
+if /i "%zt%"=="STOPPED" (goto 2)
+:1
+net stop XTU3SERVICE
+:2
 net start XTU3SERVICE
 :: BatchGotAdmin
 :-------------------------------------
@@ -55,7 +62,8 @@ if %flag%==1 (
 	set flag=0
 	goto voltcheck
     ) else (
-	echo error_at_%time% >c:\XTU_xmlfiles\error.txt
+	echo error happens in %date% %time% >>c:\XTU_xmlfiles\error.txt
     )	
 )
 net stop XTU3SERVICE
+for /f "skip=2 tokens=5" %%i in (c:\XTU_xmlfiles\Control34.txt) do echo %date% %time% current voltage offset: %%i >> c:\XTU_xmlfiles\xtulog.txt

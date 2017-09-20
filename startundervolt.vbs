@@ -1,1 +1,1 @@
-createobject("wscript.shell").run "C:/XTU_undervolt/undervolt.bat",0
+createobject("wscript.shell").run "C:\XTU_xmlFiles/undervolt.bat",0
